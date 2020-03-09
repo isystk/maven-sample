@@ -12,6 +12,10 @@
 	<url>http://maven.apache.org</url>
 
 	<properties>
+    <java.version>11</java.version>
+    <maven.compiler.source>${java.version}</maven.compiler.source>
+    <maven.compiler.target>${java.version}</maven.compiler.target>
+    <maven.compiler.release>${java.version}</maven.compiler.release>
 		<jenkins.build.number>self</jenkins.build.number>
 		<seaser-version>2.4.44</seaser-version>
 		<eclipse-jdk-container>org.eclipse.jdt.launching.JRE_CONTAINER</eclipse-jdk-container>
@@ -56,10 +60,10 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
-					<version>2.3.2</version>
+					<version>3.8.1</version>
 					<configuration>
-						<source>1.6</source>
-						<target>1.6</target>
+						<source>${java.version}</source>
+						<target>${java.version}</target>
 						<fork>true</fork>
 						<meminitial>256m</meminitial>
 						<maxmem>512m</maxmem>

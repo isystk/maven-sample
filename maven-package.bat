@@ -8,6 +8,6 @@ set PATH=%JAVA_HOME%\bin;%PATH%
 set PATH=%MAVEN_HOME%\bin;%PATH%
 
 call cd %~dp0
-call mvn -X -U -f pom.xml clean package -P st assembly:assembly
+call mvn -X -U -f pom.xml clean package assembly:assembly
 
 pause

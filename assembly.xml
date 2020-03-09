@@ -13,7 +13,7 @@
 		<!-- war & jar -->
 		<moduleSet>
 			<includes>
-				<include>com.isystk.sample:web-solr</include>
+				<include>com.isystk.sample:web-admin</include>
 				<include>com.isystk.sample:web-front</include>
 			</includes>
 			<binaries>
@@ -27,7 +27,6 @@
 		<moduleSet>
 			<includes>
 				<include>com.isystk.sample:web</include>
-				<include>com.isystk.sample:solr</include>
 			</includes>
 			<sources>
 				<fileSets>
@@ -35,26 +34,6 @@
 						<directory>deploy</directory>
 						<outputDirectory>sample-${project.version}-${jenkins.build.number}/deploy</outputDirectory>
 						<filtered>true</filtered>
-					</fileSet>
-				</fileSets>
-				<includeModuleDirectory>false</includeModuleDirectory>
-			</sources>
-		</moduleSet>
-		<!-- search -->
-		<moduleSet>
-			<includes>
-				<include>com.isystk.sample:web-solr</include>
-			</includes>
-			<sources>
-				<fileSets>
-					<fileSet>
-						<directory>search</directory>
-						<outputDirectory>sample-${project.version}-${jenkins.build.number}/deploy/search</outputDirectory>
-						<filtered>true</filtered>
-						<excludes>
-							<exclude>**/data/**/*</exclude>
-							<exclude>**/data</exclude>
-						</excludes>
 					</fileSet>
 				</fileSets>
 				<includeModuleDirectory>false</includeModuleDirectory>
